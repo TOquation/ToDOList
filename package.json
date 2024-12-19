@@ -5,9 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx tailwindcss -i ./src/styles.css -o ./src/output.css --watch",
-    "build": "npx tailwindcss -i ./src/styles.css -o ./public/output.css --minify"
-
-
+    "build": "npx tailwindcss -i ./src/styles.css -o ./public/output.css --minify && uglifyjs src/todo.js -o public/todo.js"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +16,8 @@
     "fontawesome": "^5.6.3",
     "jquery": "^3.7.1",
     "tailwindcss": "^3.4.16"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.19.3"
   }
 }
